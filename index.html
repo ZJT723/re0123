@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园趣味生活</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+            font-family:"微软雅黑",sans-serif;
+            background: linear-gradient(135deg, #f0f8ff 0%, #eaf4ff 50%, #f5f0ff 100%);
+            color:#333;
+            min-height: 100vh;
+        }
+        header{
+            background:linear-gradient(135deg,#5093f1,#40c9ff);
+            color:#fff;
+            text-align:center;
+            padding:60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before, header::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+        }
+        header::before {
+            width: 120px;
+            height: 120px;
+            top: -30px;
+            left: -30px;
+        }
+        header::after {
+            width: 180px;
+            height: 180px;
+            bottom: -60px;
+            right: -40px;
+        }
+        h1{
+            font-size:38px;
+            margin-bottom:12px;
+            position: relative;
+            z-index: 1;
+        }
+        header p{
+            font-size:18px;
+            opacity:0.9;
+            position: relative;
+            z-index: 1;
+        }
+        .container{
+            max-width:1200px;
+            margin:40px auto;
+            padding:0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-auto-rows: 1fr;
+            gap: 24px;
+        }
+        .box{
+            background:#fff;
+            padding:28px;
+            border-radius:16px;
+            box-shadow:0 4px 15px #dde7f5;
+            transition:0.3s;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 0 0 100% 0;
+            opacity: 0.12;
+        }
+        .box-1::before { background: #ff6b81; }
+        .box-2::before { background: #ffa94d; }
+        .box-3::before { background: #845ef7; }
+        .box:hover{
+            transform:translateY(-6px);
+            box-shadow: 0 10px 25px #cfdcef;
+        }
+        h2{
+            color:#3b88e8;
+            margin-bottom:16px;
+            border-left:5px solid #5093f1;
+            padding-left:12px;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            z-index: 1;
+            flex-shrink: 0;
+        }
+        p{
+            line-height:1.8;
+            font-size:15px;
+            position: relative;
+            z-index: 1;
+            color: #444;
+            flex: 1;
+        }
+        footer{
+            text-align:center;
+            padding:25px;
+            color:#777;
+            font-size:14px;
+        }
+        /* 响应式适配 */
+        @media (max-width: 900px) {
+            .container{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>多彩校园 · 趣味生活</h1>
+    <p>校园不止书本与试卷，还有无数温暖有趣的时光</p>
+</header>
+
+<div class="container">
+    <div class="box box-1">
+        <h2>😠 老师的惩罚</h2>
+        <p>英语课上，因一名同学未完成英语作文，年轻的英语老师便让全班留堂近二十分钟。老师站在讲台前神色严肃，语气里带着失望与严厉。原本盼着下课放松的同学们只能端坐座位，心里虽有几分无奈，却也渐渐明白，集体的节奏需要每个人共同维护。自那以后，班里按时完成作业的风气好了许多，大家也更懂得为自己的任务负责。</p>
+    </div>
+
+    <div class="box box-2">
+        <h2>🍄 校园安全警示</h2>
+        <p>校园草坪长出不少白色野生蘑菇，有同学好奇采摘食用后引发肠胃不适。校方立刻提高安全警惕，第一时间在草地各处设立“不能乱吃蘑菇”的警示牌，同时通过班会科普毒蘑菇风险，提醒大家切勿随意采摘食用野生植物。</p>
+    </div>
+
+    <div class="box box-3">
+        <h2>🏪 小卖部停业整改</h2>
+        <p>新学期开学后，学校小卖部因售卖过期零食、三无产品被家长实名举报。校方核查确认问题属实后，责令小卖部立即停业整改，全面清退不合格商品，严格规范进货渠道与卫生标准，待验收合格后方可恢复营业。</p>
+    </div>
+</div>
+
+<footer>
+    校园趣味生活主题网页 · 青春不负时光
+</footer>
+
+</body>
+</html>
